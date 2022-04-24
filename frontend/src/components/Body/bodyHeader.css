@@ -1,0 +1,21 @@
+.heading {
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 76px;
+  color: #3f3d56;
+  margin-top: 20px;
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color: #3f3d56;
+    margin-top: 15px;
+  }
+}
