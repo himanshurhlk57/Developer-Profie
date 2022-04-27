@@ -1,0 +1,19 @@
+.users {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  column-gap: 290px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  row-gap: 28px;
+}
+
+@media screen and (max-width: 500px) {
+  .users {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    column-gap: 30px;
+    justify-content: center;
+    margin-top: 35px;
+  }
+}

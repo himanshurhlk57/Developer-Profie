@@ -1,0 +1,22 @@
+.githubRepoWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+  margin-left: 100px;
+}
+.repoName {
+  font-size: 30px;
+  line-height: 49.1px;
+  margin-right: 8px;
+  color: #0768fa;
+}
+.repoUserImage {
+  margin-right: 8px;
+}
+.descriptionStyle {
+  color: #3f3d56;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 43.65px;
+  margin-left: 100px;
+}

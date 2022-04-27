@@ -1,0 +1,54 @@
+.formHeading {
+  margin-bottom: 16px;
+  color: #000000;
+  font-size: 28px;
+}
+.formIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+.label {
+  display: flex;
+  align-items: center;
+}
+.developerForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.developerForm input {
+  height: 42px;
+  width: 450px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 16px 0;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.submitBtn {
+  font-size: 22px;
+  height: 40px;
+  width: 120px;
+  border: none;
+  cursor: pointer;
+  background-color: #7c639f;
+  color: #fff;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.cancelBtn {
+  font-size: 22px;
+  height: 40px;
+  background-color: #fff;
+  width: 120px;
+  border: none;
+  cursor: pointer;
+  color: #3f3d56;
+  border-radius: 10px;
+}

@@ -1,0 +1,36 @@
+.personImg {
+  height: 80px;
+  width: 80px;
+  color: #7c639f;
+  border-radius: 50%;
+}
+.userDetailWrapper {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 23px; */
+}
+.username {
+  font-size: 28px;
+  color: #9f8e63;
+  margin-left: 10px;
+}
+.userLink {
+  color: #0768fa;
+  cursor: pointer;
+  margin-left: 10px;
+}
+@media screen and (max-width: 500px) {
+  .personImg {
+    height: 50px;
+    width: 50px;
+  }
+  .username {
+    font-size: 18px;
+    color: #9f8e63;
+    margin-left: 5px;
+  }
+  .userLink {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+}
