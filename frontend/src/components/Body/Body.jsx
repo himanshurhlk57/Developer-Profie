@@ -10,6 +10,7 @@ import CouldNotFind from "./CouldNotFind";
 
 function Body() {
   const [users, setUsers] = useState([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     async function fetchUser() {
@@ -18,7 +19,7 @@ function Body() {
       setUsers(data);
     }
     fetchUser();
-  }, [users]);
+  }, [isSubmitted]);
 
   return (
     <div>
@@ -33,7 +34,7 @@ function Body() {
       </div>
       <Divider />
       <CouldNotFind />
-      <DeveloperInfoButton />
+      <DeveloperInfoButton setIsSubmitted={setIsSubmitted} />
       <Footer />
     </div>
   );

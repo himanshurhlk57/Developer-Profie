@@ -20,7 +20,7 @@ function FormDivider() {
   );
 }
 
-function DeveloperForm({ clicked, setClicked }) {
+function DeveloperForm({ setClicked, setIsSubmitted }) {
   const [formData, setFormData] = useState({
     github_id: "",
     linkedin_id: "",
@@ -67,6 +67,7 @@ function DeveloperForm({ clicked, setClicked }) {
       const data = await response.json();
       console.log(data);
       setClicked(false);
+      setIsSubmitted(true);
     } catch (err) {
       console.log(err);
     }
@@ -88,6 +89,7 @@ function DeveloperForm({ clicked, setClicked }) {
             type="text"
             id="github"
             required
+            placeholder="himanshurhlk57"
             name="github_id"
             value={formData.github_id}
             onChange={onChangeUpdate}
