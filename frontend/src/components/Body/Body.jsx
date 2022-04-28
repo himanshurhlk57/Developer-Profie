@@ -18,7 +18,7 @@ function Body() {
       setUsers(data);
     }
     fetchUser();
-  }, []);
+  }, [users]);
 
   return (
     <div>

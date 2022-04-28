@@ -66,10 +66,11 @@ function DeveloperForm({ clicked, setClicked }) {
       });
       const data = await response.json();
       console.log(data);
+      setClicked(false);
     } catch (err) {
       console.log(err);
     }
-    window.location.reload();
+    // window.location.reload();
   };
   return (
     <div className="developerForm">
