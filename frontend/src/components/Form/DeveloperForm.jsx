@@ -86,6 +86,7 @@ function DeveloperForm({ clicked, setClicked }) {
           <input
             type="text"
             id="github"
+            required
             name="github_id"
             value={formData.github_id}
             onChange={onChangeUpdate}

@@ -50,7 +50,7 @@ function UserBody({ userLinks }) {
         <div className="userDetail">
           <div className="userDetails">
             <h1 className="name">{name}</h1>
-            <pre className="bio">{bio}</pre>
+            <p className="bio">{bio}</p>
           </div>
           <div className="socialLinks">
             <a
