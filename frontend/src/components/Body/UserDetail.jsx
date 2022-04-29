@@ -8,7 +8,6 @@ function UserDetail({ user }) {
     <div className="userDetailHome">
       <div className="userDetailWrapper">
         <img className="personImg" src={user.avatar_url} alt="users" />
-
         <span className="username">{user.id}</span>
         <Link to={`/users/${user.id}`}>
           <img className="userLink" src={link} alt="" />

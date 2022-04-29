@@ -25,7 +25,7 @@ function Body() {
     <div>
       <BodyHeader innerText={"Explore developer profiles"} />
       <Divider />
-      <SearchBar />
+      <SearchBar users={users} />
       <div className="users" style={{ marginBottom: "30px" }}>
         {users.length &&
           users.map((user) => {
