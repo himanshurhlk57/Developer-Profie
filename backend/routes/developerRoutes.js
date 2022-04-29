@@ -443,11 +443,11 @@ router.post("/", (req, res) => {
   } = req.body;
 
   let developer = req.body;
-  console.log(developer);
+  // console.log(developer);
   developer["id"] = github_id;
 
   const userGithubApi = api + github_id;
-  console.log(userGithubApi);
+  // console.log(userGithubApi);
 
   const fetchApi = async () => {
     const response = await fetch(userGithubApi, {
