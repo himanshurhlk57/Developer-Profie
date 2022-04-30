@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import BodyHeader from "./BodyHeader";
 import Divider from "./Divider";
-import SearchBar from "./SearchBar";
 import UserDetail from "./UserDetail";
 import "./body.css";
 import DeveloperInfoButton from "../Form/DeveloperInfoButton";
 import Footer from "./Footer";
 import CouldNotFind from "./CouldNotFind";
+import searchSvg from "../static/search-24px.svg";
+import "./searchBar.css";
 
 function Body() {
   const [users, setUsers] = useState([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     async function fetchUser() {
@@ -25,11 +28,32 @@ function Body() {
     <div>
       <BodyHeader innerText={"Explore developer profiles"} />
       <Divider />
-      <SearchBar users={users} />
+      <div className="searchBar">
+        <div className="searchBarWrapper">
+          <input
+            className="inputField"
+            placeholder="Search for username"
+            type="text"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+          />
+          <img type="submit" src={searchSvg} alt="" className="searchImg" />
+        </div>
+      </div>
       <div className="users" style={{ marginBottom: "30px" }}>
-        {users.length &&
-          users.map((user) => {
-            return <UserDetail key={user.id} user={user} />;
+        {(users || [])
+          .filter((user) => {
+            if (search === "") {
+              return user;
+            } else if (user.id.toLowerCase().includes(search.toLowerCase())) {
+              return user;
+            }
+            return false;
+          })
+          .map((user) => {
+            return <UserDetail user={user} key={user.id} />;
           })}
       </div>
       <Divider />

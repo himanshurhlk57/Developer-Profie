@@ -523,7 +523,6 @@ router.get("/:id", (req, res) => {
 // delete a developer
 router.delete("/:id", (req, res) => {
   const user = req.params.id;
-  console.log(user, "To be deleted");
   developerProfile.map((developer, index) => {
     const { id } = developer;
     if (id === user) {
