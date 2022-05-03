@@ -58,7 +58,7 @@ function Body() {
       </div>
       <Divider />
       <CouldNotFind />
-      <DeveloperInfoButton setIsSubmitted={setIsSubmitted} />
+      <DeveloperInfoButton isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} />
       <Footer />
     </div>
   );

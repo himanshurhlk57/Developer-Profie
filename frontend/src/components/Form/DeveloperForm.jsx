@@ -20,7 +20,7 @@ function FormDivider() {
   );
 }
 
-function DeveloperForm({ setClicked, setIsSubmitted }) {
+function DeveloperForm({ setClicked, setIsSubmitted, isSubmitted }) {
   const [formData, setFormData] = useState({
     github_id: "",
     linkedin_id: "",
@@ -39,7 +39,7 @@ function DeveloperForm({ setClicked, setIsSubmitted }) {
   };
 
   const submitHandler = async (e) => {
-    console.log("github_id", formData.github_id);
+    // console.log("github_id", formData.github_id);
     e.preventDefault();
     try {
       const {
@@ -67,7 +67,7 @@ function DeveloperForm({ setClicked, setIsSubmitted }) {
       const data = await response.json();
       console.log(data);
       setClicked(false);
-      setIsSubmitted(true);
+      setIsSubmitted(!isSubmitted);
     } catch (err) {
       console.log(err);
     }

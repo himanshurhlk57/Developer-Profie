@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./developerButton.css";
 import DeveloperForm from "./DeveloperForm";
-function DeveloperInfoButton({ setIsSubmitted }) {
+function DeveloperInfoButton({ setIsSubmitted, isSubmitted }) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -18,6 +18,7 @@ function DeveloperInfoButton({ setIsSubmitted }) {
       {clicked && (
         <DeveloperForm
           setClicked={setClicked}
+          isSubmitted = {isSubmitted}
           setIsSubmitted={setIsSubmitted}
         />
       )}
